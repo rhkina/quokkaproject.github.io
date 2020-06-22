@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Quokka Project Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Quokka Project Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-quokka-cms-the-happiest-cms-in-the-world">What is Quokka CMS, the happiest CMS in the world?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#features">Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#demo">Demo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-quokka-from-pypi">Installing Quokka from Pypi</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-and-running-for-development-mode">Installing and running for development mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-quokka-cms">Using Quokka CMS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#set-important-configurations">Set important configurations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-an-admin-user">Create an admin user</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run-your-website">Run your website</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#access-admin-interface">Access admin interface</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#access-your-site">Access your site</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deploy">Deploy</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#you-can-deploy-your-quokka-website-in-a-wsgi-server">You can deploy your Quokka Website in a WSGI server</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#publish-static-html-website">Publish Static HTML website</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#you-can-generate-a-static-html-website-to-host-anywhere">You can generate a static HTML website to host anywhere</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deploying-to-github-pages-from-command-line">Deploying to github pages from command line</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deploying-via-scp">Deploying via SCP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deploying-to-heroku">Deploying to Heroku</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deploying-via-ftp">Deploying via FTP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#load-database-from-remote-deployment-only-for-tinydb">Load database from remote deployment (only for TinyDB)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-mongodb">Using MongoDB</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#running-mongo-in-a-docker-container">Running mongo in a Docker container</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contributing-to-quokka-cms-development">Contributing to Quokka CMS Development</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-a-contributor-environment">Setup a contributor environment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#roadmap">Roadmap</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#screenshots">Screenshots</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-main-admin-page">The main Admin page</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pelican-themes-compatible">Pelican themes compatible</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="about/">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Quokka Project Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="http://github.com/quokkaproject/quokka/edit/master/docs/index.md"> Edit on quokka</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="welcome-to-quokka-project-documentation">Welcome to Quokka Project documentation</h1>
+<hr>
+
+<p><center>
+<img alt="logo" src="img/emoji_small.png" />
+</center></p>
+<p>This docs covers the development version of Quokka CMS and is always subjected to changes, if you want previous docs versions use github tags.</p>
+<p>Access our website to see more details: <a href="http://quokkaproject.org/">http://quokkaproject.org/</a></p>
+<p>Quokka is an open source project and it is available at <a href="https://github.com/quokkaproject/quokka">https://github.com/quokkaproject/quokka</a>.</p>
+<h2 id="what-is-quokka-cms-the-happiest-cms-in-the-world">What is Quokka CMS, the happiest CMS in the world?</h2>
+<hr>
+
+<p>Quokka CMS is a Content Management System, a platform to publish blogs, websites, portals and also a nice solution for intranets, Document Management System (GED/ECM). It is even possible to create various kinds of applications based in content publishing as fundraising and e-commerce applications.</p>
+<p>Quokka is Open Source developed in Python using Flask and MongoDB as its base.</p>
+<p>Quokka is not limited to CMS area, it is possible to create Quokka extensions to provide any kind of web application based on Python and Flask.</p>
+<p>Optionally, Quokka can generate a static website from the contents generated in its admin interface.</p>
+<h2 id="features">Features</h2>
+<hr>
+
+<ul>
+<li>Web based content management admin interface</li>
+<li>Multiple content formats (markdown, rst, html, plaintext)</li>
+<li>Compatibility with any of the Pelican Themes</li>
+<li>Flat file NoSQL database TinyDB or optionally MongoDB for scale deployments</li>
+<li>Host the Quokka on server or generate a static website</li>
+<li>Extensible via modules/plugins</li>
+<li>Powered by Python, Flask, Flask-Admin, TinyMongo and Pelican Themes</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<hr>
+
+<h3 id="demo">Demo</h3>
+<blockquote>
+<p>Use this if you want to see how Quokka works (you need to have docker installen in your machine)</p>
+</blockquote>
+<pre><code>docker run --rm -it -p 5000:5000 quokka/quokka
+</code></pre>
+
+<p>Go to <code>http://localhost:5000/admin</code> and login using admin/admin.</p>
+<h3 id="installing-quokka-from-pypi">Installing Quokka from Pypi</h3>
+<blockquote>
+<p>NOTE: QuokkaCMS requires Python 3.6+</p>
+</blockquote>
+<pre><code>python3 -m venv venv
+. venv/bin/activate
+pip3 install quokka
+</code></pre>
+
+<h3 id="installing-and-running-for-development-mode">Installing and running for development mode</h3>
+<blockquote>
+<p>NOTE: Quokka CMS requires Python 3.6+</p>
+</blockquote>
+<pre><code>git clone https://github.com/quokkaproject/quokka
+cd quokka
+python3 -m venv venv
+. venv/bin/activate
+make install
+make devserver
+</code></pre>
+
+<h2 id="using-quokka-cms">Using Quokka CMS</h2>
+<p>Start a project</p>
+<pre><code class="bash">quokka init NewWebsite --theme=flex --modules=gitpages,heroku
+</code></pre>
+
+<pre><code>🐹 Quokka project created 🐹
+📝 Name: NewWebsite
+📁 Location: /tmp/newwebsite
+📚 Template: default
+🎨 Themes: flex theme installed
+🚚 Modules: [gitpages, heroku] installed
+🔧 Config: Config file written in /tmp/newwebsite/quokka.yml
+➡ Go to /tmp/newwebsite
+⚙ run `quokka runserver` to start!
+📄 Check the documentation on http://quokkaproject.org
+🐹 Happy Quokka! 🐹
+</code></pre>
+
+<blockquote>
+<p>YES! it outputs emojis 🐹</p>
+</blockquote>
+<p>The above command will generate your project in <code>NewWebsite</code> folder as:</p>
+<pre><code class="bash">.
+├── databases        # TinyDB database files (gitignored)
+├── modules          # Custom modules to load on EXTRA_EXTENSIONS
+├── static_build     # output static site
+├── themes           # Front-end Themes (Pelican and Quokka Themes supported)
+├── uploads          # Media uploaded via admin
+├── .gitignore       # gitignore to exclude sensitive files
+├── quokka.yml       # Project settings
+├── .secrets.yml     # To store keys, tokens and passwords (gitignored)
+└── wsgi.py          # To deploy `gunicorn wsgi:app`
+</code></pre>
+
+<p>You can optionally pass arguments:</p>
+<p>Choose existing theme (the default is <a href="https://github.com/grupydf/malt">Malt</a>)</p>
+<pre><code class="bash">quokka init NewWebsite --theme http://github.com/&lt;user&gt;/theme
+</code></pre>
+
+<p>Install modules</p>
+<pre><code class="bash">quokka init NewWebsite --theme http://github.com/&lt;user&gt;/theme --modules=&quot;commerce,foo&quot;
+</code></pre>
+
+<blockquote>
+<p>the above looks for <code>quokka_commerce</code> and <code>quokka_foo</code> in PyPI and installs it</p>
+</blockquote>
+<h4 id="set-important-configurations">Set important configurations</h4>
+<pre><code class="bash">quokka init NewWebsite --theme http://github.com/user/theme --config=&quot;auth_enabled=false&quot;
+</code></pre>
+
+<blockquote>
+<p>That is optional, you can to edit <code>quokka.yml</code> to tune your settings.</p>
+</blockquote>
+<h4 id="create-an-admin-user">Create an admin user</h4>
+<pre><code>quokka adduser
+</code></pre>
+
+<h4 id="run-your-website">Run your website</h4>
+<pre><code class="bash">quokka runserver --port 5000
+</code></pre>
+
+<h4 id="access-admin-interface">Access admin interface</h4>
+<pre><code class="bash">http://localhost:5000/admin
+</code></pre>
+
+<h4 id="access-your-site">Access your site</h4>
+<pre><code class="bash">http://localhost:5000
+</code></pre>
+
+<h2 id="deploy">Deploy</h2>
+<h3 id="you-can-deploy-your-quokka-website-in-a-wsgi-server">You can deploy your Quokka Website in a WSGI server</h3>
+<p>Check the <code>wsgi.py</code> and refer to it when deploying in wsgi servers.</p>
+<pre><code class="bash">cd myproject
+gunicorn wsgi:app -w 4 -b &quot;0.0.0.0:8000&quot;
+</code></pre>
+
+<p>An example of <code>supervisord</code> config</p>
+<pre><code class="ini">[program:quokka]
+command=/myproject/venv/bin/gunicorn wsgi:app -w 4 -b &quot;0.0.0.0:8000&quot;
+directory=/myproject
+</code></pre>
+
+<p>For more information read <a href="http://docs.gunicorn.org/en/stable/index.html">Gunicorn documentation</a></p>
+<h2 id="publish-static-html-website">Publish Static HTML website</h2>
+<blockquote>
+<p><strong>NOTE</strong>: To generate a static website all user management, keys and passwords will be removed from settings.</p>
+</blockquote>
+<h3 id="you-can-generate-a-static-html-website-to-host-anywhere">You can generate a static HTML website to host anywhere</h3>
+<p>Once you have your website running locally you can easily generate a
+static HTML website from it.</p>
+<pre><code class="bash">$ quokka publish --static [--output path]
+Generating static HTML website on ./static_build folder
+</code></pre>
+
+<p>Once you have a ./static_build folder populated with static website you can deploy it
+using SCP, FTP or git, it is a full static website.</p>
+<h3 id="deploying-to-github-pages-from-command-line">Deploying to github pages from command line</h3>
+<blockquote>
+<p>NOTE: You need either ssh key access to github or it will ask login/password</p>
+</blockquote>
+<pre><code class="bash">quokka publish --static --git=&lt;user&gt;/&lt;mysite&gt; --branch=gh_pages
+</code></pre>
+
+<blockquote>
+<p>The above is also available in admin under 'publish' menu.</p>
+</blockquote>
+<h3 id="deploying-via-scp">Deploying via SCP</h3>
+<pre><code class="bash">$ quokka publish --static --scp --dest='me@hostname:/var/www/mysite' [--sshkey ~/.ssh/key] [--password xyz]
+password: ...
+</code></pre>
+
+<h3 id="deploying-to-heroku">Deploying to Heroku</h3>
+<blockquote>
+<p>This requires <code>heroku</code> client installed, if <code>Procfile</code> is not found it will be generated</p>
+</blockquote>
+<pre><code class="bash">quokka publish --static --heroku --options
+</code></pre>
+
+<h3 id="deploying-via-ftp">Deploying via FTP</h3>
+<pre><code class="bash">quokka publish --static --ftp --host='ftp://server.com' --dest='/var/www/mysite'
+</code></pre>
+
+<h3 id="load-database-from-remote-deployment-only-for-tinydb">Load database from remote deployment (only for TinyDB)</h3>
+<p>When you publish a static website along with the static files the database also
+goes to the server under the databases/ folder only as a backup and snapshot.</p>
+<p>You can load that remote database locally e.g: to add new posts and then re-publish</p>
+<pre><code class="bash">$ quokka restoredb --remote --git=rochacbruno/mysite
+Creating a backup of local database...
+Downloading remote database
+Restoring database..
+Done...
+</code></pre>
+
+<p>Now you can run <code>quokka runserver</code> open your <code>localhost:5000/admin</code> write new content
+and then <code>Publish</code> website again using command line or admin interface.</p>
+<blockquote>
+<p>NOTE: If you want to restore a local database use <code>--local</code> and <code>--path path/to/db</code></p>
+</blockquote>
+<h2 id="using-mongodb">Using MongoDB</h2>
+<p>You can choose to use MongoDB instead of TinyDB, That is useful specially if
+you deploy or local instance has more than one admin user concurrently
+and also useful if you want to install plugins which support MongoDB only
+(because it relies on aggregations and gridfs)</p>
+<p>You only need a running instance
+of Mongo server and change <code>quokka.yml:DB</code> on your project from:</p>
+<pre><code class="yaml">quokka:
+  DB:
+    system: tinydb
+    folder: databases
+</code></pre>
+
+<p>to:</p>
+<pre><code class="yaml">quokka:
+  DB:
+    system: mongodb
+    name: my_database
+    host: 127.0.0.1
+    port: 2600
+</code></pre>
+
+<p>Then when running <code>quokka</code> again it will try to connect to that Mongo Server.</p>
+<p>With that you can deploy your site on <code>wsgi</code> server or can also generate <code>static</code> website.</p>
+<h3 id="running-mongo-in-a-docker-container">Running mongo in a Docker container</h3>
+<pre><code class="bash">cd &lt;your quokka project folder&gt;
+docker run -d -v $PWD/databases:/data/db -p 27017:27017 mongo
+# wait some seconds until mongo is started
+quokka runserver
+</code></pre>
+
+<h2 id="contributing-to-quokka-cms-development">Contributing to Quokka CMS Development</h2>
+<p>Do you want to be part of this open-source project?</p>
+<p>Take a look at <a href="https://github.com/quokkaproject/quokka/blob/master/CONTRIBUTING.md">Contributing Guidelines</a></p>
+<h3 id="setup-a-contributor-environment">Setup a contributor environment</h3>
+<p>Ensure you have <code>Python3.6+</code> fork this repo and:</p>
+<pre><code class="bash">git clone https://github.com/$YOURNAME/quokka
+cd quokka
+
+# create a Python3.6 virtual env
+make create_env
+
+# activate the venv
+. venv/bin/activate
+
+# install Quokka in --editable mode (using pbr)
+make install
+
+# Create a new admin user
+make adduser
+
+# run quokka
+make devserver
+</code></pre>
+
+<p>Access <code>http://localhost:5000/admin</code> and <code>http://localhost</code></p>
+<h2 id="roadmap">Roadmap</h2>
+<p>This list is available on <a href="https://github.com/quokkaproject/quokka/issues">Github</a>.</p>
+<p>This is the list of tasks to be completed until <code>1.0.0</code> can be released.</p>
+<p>Support 100% coming only for <code>malt</code> and <code>bootstrap3</code> themes</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="the-main-admin-page">The main Admin page</h3>
+<p><img alt="home cms" src="https://user-images.githubusercontent.com/458654/35923897-a6f321be-0c08-11e8-95ff-5510862326ea.png" /></p>
+<h3 id="pelican-themes-compatible"><a href="http://www.pelicanthemes.com/">Pelican themes</a> compatible</h3>
+<p>An article showing in Malt theme  </p>
+<p><img alt="start contributing to quokka project my site" src="https://user-images.githubusercontent.com/458654/35923881-a128c9d2-0c08-11e8-94b4-813588209f04.png" /></p>
+<p>The same article using Bootstrap 3 theme  </p>
+<p><img alt="start contributing to quokka project my site2" src="https://user-images.githubusercontent.com/458654/35924086-32840ebe-0c09-11e8-861e-db1a66b87326.png" /></p>
+<blockquote>
+<p>See more screenshots on <a href="https://github.com/quokkaproject/quokka/issues/647">Github</a>.</p>
+<p><a href="https://github.com/quokkaproject/quokka/blob/master/CONTRIBUTING.md">Start contributing right now!</a></p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2020-06-22 18:38:04.509232+00:00
+-->
