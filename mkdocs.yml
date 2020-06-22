@@ -3,3 +3,6 @@ site_dir: documentation
 repo_url: http://github.com/quokkaproject/quokka
 repo_name: quokka
 theme: readthedocs
+nav:
+  - Home: index.md
+  - About: about.md
